@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:final_project/models/user.dart';
 import 'package:final_project/pages/user_detail_page.dart';
@@ -75,11 +76,11 @@ class _MainPageState extends State<MainPage> {
                 color: Color.fromRGBO(145, 41, 53, 1),
               ),
               title: const Text(
-                'Logout',
+                'Exit Application',
                 style: _drawerTextStyle,
                 textAlign: TextAlign.center,
               ),
-              onTap: () {},
+              onTap: () => exit(0),
             ),
           ],
         ),
