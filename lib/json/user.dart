@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'address.dart';
+import '../json/address.dart';
 import 'company.dart';
 
 part 'user.g.dart';
@@ -27,15 +27,5 @@ class User {
     required this.company,
   });
 
-  // factory User.fromJson(Map<dynamic, dynamic> json) {
-  //   return User(
-  //       id: json['id'],
-  //       name: json['name'],
-  //       username: json['username'],
-  //       email: json['email'],
-  //       address: Address.fromJson(json['address']),
-  //       phone: json['phone'],
-  //       website: json['website'],
-  //       company: Company.fromJson(json['company']));
-  // }
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }

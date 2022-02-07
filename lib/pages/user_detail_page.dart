@@ -1,9 +1,8 @@
 import 'dart:convert';
-import 'dart:ui';
 
-import 'package:final_project/models/address.dart';
-import 'package:final_project/models/company.dart';
-import 'package:final_project/models/job.dart';
+import 'package:final_project/json/address.dart';
+import 'package:final_project/json/company.dart';
+import 'package:final_project/json/job.dart';
 import 'package:final_project/widgets/custom_user_row.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -47,7 +46,7 @@ class _UserDetailPageState extends State<UserDetailPage> {
     if (response.statusCode == 200) {
       final _data = jsonDecode(response.body);
       setState(() {});
-      for (Map i in _data) {
+      for (Map<String, dynamic> i in _data) {
         _jobList.add(Job.fromJson(i));
       }
       _isLoading = false;

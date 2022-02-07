@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:final_project/models/user.dart';
+import 'package:final_project/json/user.dart';
 import 'package:final_project/pages/user_detail_page.dart';
 import 'package:final_project/resources/resources.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +27,7 @@ class _MainPageState extends State<MainPage> {
     if (response.statusCode == 200) {
       final _data = jsonDecode(response.body);
       setState(() {});
-      for (Map i in _data) {
+      for (Map<String, dynamic> i in _data) {
         _list.add(User.fromJson(i));
       }
       isLoading = false;

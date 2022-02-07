@@ -14,11 +14,5 @@ class Company {
     required this.bs,
   });
 
-  // static fromJson(Map<String, dynamic> json) {
-  //   return Company(
-  //     name: json['name'],
-  //     catchPhrase: json['catchPhrase'],
-  //     bs: json['bs'],
-  //   );
-  // }
+  static fromJson(Map<String, dynamic> json) => _$CompanyFromJson(json);
 }

@@ -20,13 +20,5 @@ class Address {
     required this.geo,
   });
 
-  // static fromJson(Map<String, dynamic> json) {
-  //   return Address(
-  //     street: json['street'],
-  //     suite: json['suite'],
-  //     city: json['city'],
-  //     zipcode: json['zipcode'],
-  //     geo: Geo.fromJson(json['geo']),
-  //   );
-  // }
+  static fromJson(Map<String, dynamic> json) => _$AddressFromJson(json);
 }

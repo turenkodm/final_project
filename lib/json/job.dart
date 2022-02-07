@@ -16,12 +16,5 @@ class Job {
     required this.completed,
   });
 
-  // factory Job.fromJson(Map<dynamic, dynamic> json) {
-  //   return Job(
-  //     userId: json['userId'],
-  //     id: json['id'],
-  //     title: json['title'],
-  //     completed: json['completed'],
-  //   );
-  // }
+  factory Job.fromJson(Map<String, dynamic> json) => _$JobFromJson(json);
 }

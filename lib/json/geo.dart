@@ -12,10 +12,5 @@ class Geo {
     required this.lng,
   });
 
-  // static fromJson(Map<String, dynamic> json) {
-  //   return Geo(
-  //     lat: json['lat'],
-  //     lng: json['lng'],
-  //   );
-  // }
+  static fromJson(Map<String, dynamic> json) => _$GeoFromJson(json);
 }
